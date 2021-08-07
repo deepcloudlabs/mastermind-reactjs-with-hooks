@@ -45,5 +45,30 @@ In order to make the game more **pleasant** for the player we *challange the use
 
 You can use a single state with a complex object or multiple states using **useState()**:
 
+```js
+    let [game, setGame] = useState({
+        level: 3,
+        tries: 0,
+        secret: createSecret(3),
+        moves: [],
+        counter: 120,
+        guess: 145,
+        statistics: {
+            wins: 0,
+            loses: 0
+        }
+    });
+```
+
+versus
+
+```js
+    let [level, setLevel] = useState(3);
+    let [tries, setTries] = useState(0);
+    let [moves, setMoves] = useState([]);
+    . . .
+    let [guess, setGuess] = useState(123);
+```
+
 
 Unlike the **setState()** in class components, the **setState()** returned from **useState()** doesn't merge objects with existing state, it replaces the object entirely. If you want to do a merge, you would need to read the previous state and merge it with the new values yourself. You may try to **useReducer()** or ES6 object destructuring syntax. 
