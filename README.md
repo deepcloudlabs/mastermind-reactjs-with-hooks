@@ -30,10 +30,5 @@ Initial state is initialized from the **localStroage** if it is available. If th
         localStorage.setItem("mastermind", JSON.stringify(game));
     });
 
-    useEffect(() => {
-        let timerId = setInterval(countdown, 1000);
-        return () => {
-            clearInterval(timerId);
-        }
-    });
 ```
+
