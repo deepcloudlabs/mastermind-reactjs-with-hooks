@@ -70,6 +70,6 @@ versus
     let [guess, setGuess] = useState(123);
 ```
 
-Every time you call the setXYZ() methods the component re-renders. Hence the single state case triggers just one re-rendering. Multiple re-rendering has a little drawback: the cost of function call. 
+Every time you call the setXYZ() methods the component re-renders. Hence the single state case triggers just one re-rendering. Multiple re-rendering usually is not a problem thanks to React's reconsilition algorithm. Though it has a little drawback: the cost of function call. Contrary to single state, multiple states draws a clear boundary between different intensions in updating the state.  
 
 Unlike the **setState()** in class components, the **setState()** returned from **useState()** doesn't merge objects with existing state, it replaces the object entirely. If you want to do a merge, you would need to read the previous state and merge it with the new values yourself. You may try to **useReducer()** or ES6 object destructuring syntax. 
