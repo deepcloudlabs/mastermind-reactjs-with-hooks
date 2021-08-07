@@ -118,7 +118,3 @@ Unlike the **setState()** in class components, the **setState()** returned from 
     
     . . .
 ```
-
-*or* 
-
-ES6 object destructuring syntax: 
