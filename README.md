@@ -32,3 +32,13 @@ Initial state is initialized from **localStroage** if a value is available for t
 
 ```
 
+In order to make the game more **pleasant** for the player we *challange the user* with **the time limit**:
+
+```js
+    useEffect(() => {
+        let timerId = setInterval(countdown, 1000);
+        return () => {
+            clearInterval(timerId);
+        }
+    });
+```
