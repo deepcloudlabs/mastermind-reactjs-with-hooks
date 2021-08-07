@@ -4,7 +4,7 @@
 
 Initial state is initialized from the **localStroage** if it is available. If there is a change in the state, it is immediatly stored in **localStorage**:
 
-"""js
+```js
    let initialGameState = {
         level: 3,
         tries: 0,
@@ -36,4 +36,4 @@ Initial state is initialized from the **localStroage** if it is available. If th
             clearInterval(timerId);
         }
     });
-"""
+```
