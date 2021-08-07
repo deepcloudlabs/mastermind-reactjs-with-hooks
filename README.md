@@ -108,9 +108,15 @@ Unlike the **setState()** in class components, the **setState()** returned from 
         return newGame;
     }
     
-     . . . 
+    . . .
+    
+    const [game, dispatch] = useReducer(reducer, initialState);
+    
+    . . . 
     
     <button onClick={() => dispatch({type: 'PLAY'})}}  className="btn btn-success">Play</button>
+    
+    . . .
 ```
 
 *or* 
